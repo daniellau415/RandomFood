@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapViewPlus
 
 struct Yelp: Codable {
 
@@ -15,8 +16,9 @@ struct Yelp: Codable {
 }
 
 
-struct Business : Codable {
+struct Business : Codable, CalloutViewModel {
     let name : String
+    let image_url : String
     let coordinates : Coordinates
     let location : Location
 }

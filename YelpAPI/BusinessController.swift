@@ -6,7 +6,7 @@
 //  Copyright © 2018 Daniel Lau. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreLocation
 
 
@@ -46,4 +46,24 @@ class BusinessController {
         dataTask.resume()
     
     }
+    
+    
+    func stringToImage(with stringURL: String, completion: @escaping(UIImage?) -> Void) {
+        guard let imageURL = URL(string: stringURL) else { return }
+        let dataTask = URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
+            if let data = data {
+                let image = UIImage(data: data)
+                completion(image)
+            }
+            if let error = error {
+                print(error.localizedDescription)
+                completion(nil)
+                return
+            }
+        }
+        dataTask.resume()
+        
+    }
+    
+    
 }
