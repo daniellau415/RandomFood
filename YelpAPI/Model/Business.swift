@@ -10,11 +10,9 @@ import Foundation
 import MapViewPlus
 
 struct Yelp: Codable {
-
     let total : Int
     let businesses : [Business]
 }
-
 
 struct Business : Codable, CalloutViewModel {
     let name : String

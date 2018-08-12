@@ -13,19 +13,23 @@ import MapKit
 class YourCalloutView: UIView, CalloutViewPlus {
     
     
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var foodLabel: UILabel!
+    @IBOutlet weak var foodImageView: UIImageView!
     var coordinates : Coordinates?
+    
+    
+    
     
     func configureCallout(_ viewModel: CalloutViewModel) {
         let viewModel = viewModel as! Business
         
-        label.text = viewModel.name
+        foodLabel.text = viewModel.name
         coordinates = viewModel.coordinates
         BusinessController.shared.stringToImage(with: viewModel.image_url, completion: { (image) in
             DispatchQueue.main.async {
                 if let image = image {
-                    self.imageView.image = image
+    
+                    self.foodImageView.image = image
                 }
             }
             

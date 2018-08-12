@@ -18,12 +18,10 @@ class BusinessController {
     
      let accessToken = "JL4PMbUDUhx-pDdb07-lRsSAHCwoE_y8CKiK5G34kDMbd5pjX3hQXlerMrBkMEmj8gIO4p4F98h6SScNqmSsCcIN97RI7yjNEYI7JrpEex2NXOnSzALm1CbWfuHDWnYx"
     
-    
     func searchOnYelp(with location: CLLocationCoordinate2D, completion: @escaping([Business]?) -> Void)  {
         
-        let baseURL = URL(string: "https://api.yelp.com/v3/businesses/search?&latitude=\(location.latitude)&longitude=\(location.longitude)&categories=mexican&radius=3000&limit=5")
+        let baseURL = URL(string: "https://api.yelp.com/v3/businesses/search?&latitude=\(location.latitude)&longitude=\(location.longitude)&term=taco&radius=1500&limit=7")
         
-        print(baseURL)
         var request = URLRequest(url: baseURL!)
         request.httpMethod = "GET"
         request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
