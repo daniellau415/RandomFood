@@ -57,6 +57,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B3467916211925DB00B107FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3B8E98621176D450021B24E /* Assets.xcassets */,
+				B3B8E97F21176D440021B24E /* AppDelegate.swift */,
+				B3B8E98821176D450021B24E /* LaunchScreen.storyboard */,
+				B3B8E98B21176D450021B24E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B34679172119260900B107FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3B8E98321176D440021B24E /* Main.storyboard */,
+				B3AEF3652118F63B008BFC84 /* YourCalloutView.xib */,
+				B3AEF3632118F5B9008BFC84 /* YourCalloutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B34679182119261000B107FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B3B8E98121176D440021B24E /* BusinessViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B34679192119261600B107FE /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3B8E99321176E860021B24E /* BusinessController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		B346791A2119261F00B107FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3B8E99121176DE50021B24E /* Business.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B3B8E97321176D440021B24E = {
 			isa = PBXGroup;
 			children = (
@@ -78,16 +123,11 @@
 		B3B8E97E21176D440021B24E /* YelpAPI */ = {
 			isa = PBXGroup;
 			children = (
-				B3B8E97F21176D440021B24E /* AppDelegate.swift */,
-				B3B8E99121176DE50021B24E /* Business.swift */,
-				B3B8E99321176E860021B24E /* BusinessController.swift */,
-				B3B8E98121176D440021B24E /* BusinessViewController.swift */,
-				B3B8E98321176D440021B24E /* Main.storyboard */,
-				B3AEF3652118F63B008BFC84 /* YourCalloutView.xib */,
-				B3AEF3632118F5B9008BFC84 /* YourCalloutView.swift */,
-				B3B8E98621176D450021B24E /* Assets.xcassets */,
-				B3B8E98821176D450021B24E /* LaunchScreen.storyboard */,
-				B3B8E98B21176D450021B24E /* Info.plist */,
+				B346791A2119261F00B107FE /* Model */,
+				B34679192119261600B107FE /* Model Controller */,
+				B34679182119261000B107FE /* ViewController */,
+				B34679172119260900B107FE /* Views */,
+				B3467916211925DB00B107FE /* Supporting Files */,
 			);
 			path = YelpAPI;
 			sourceTree = "<group>";
@@ -382,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VSPJ2N6B9;
-				INFOPLIST_FILE = YelpAPI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YelpAPI/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,7 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VSPJ2N6B9;
-				INFOPLIST_FILE = YelpAPI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YelpAPI/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

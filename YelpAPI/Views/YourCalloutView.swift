@@ -11,15 +11,11 @@ import MapViewPlus
 import MapKit
 
 class YourCalloutView: UIView, CalloutViewPlus {
-    
-    
+        
     @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var foodImageView: UIImageView!
     var coordinates : Coordinates?
-    
-    
-    
-    
+
     func configureCallout(_ viewModel: CalloutViewModel) {
         let viewModel = viewModel as! Business
         

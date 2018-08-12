@@ -42,7 +42,6 @@ class BusinessViewController: UIViewController {
                 }
             }
         }
-
     }
     
     func zoomToLastestLocation(with coordinate: CLLocationCoordinate2D) {
