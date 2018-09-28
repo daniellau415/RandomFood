@@ -24,6 +24,7 @@ xcuserdata/
 *.DS_Store
 *.keys
 
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
