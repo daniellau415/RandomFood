@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		50AB1DF53ADADCC35F293F45 /* Pods_YelpAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9099F183005122018BB80C85 /* Pods_YelpAPI.framework */; };
+		B38A78F1215DA4F10085C7FD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A78F0215DA4F10085C7FD /* Keys.swift */; };
+		B38A78F3215DA5070085C7FD /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B38A78F2215DA5070085C7FD /* keys.plist */; };
 		B3AEF3642118F5B9008BFC84 /* YourCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEF3632118F5B9008BFC84 /* YourCalloutView.swift */; };
 		B3AEF3662118F63B008BFC84 /* YourCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3AEF3652118F63B008BFC84 /* YourCalloutView.xib */; };
 		B3B8E98021176D440021B24E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8E97F21176D440021B24E /* AppDelegate.swift */; };
@@ -22,6 +24,9 @@
 /* Begin PBXFileReference section */
 		3E64C46DFB96A95F5C17946C /* Pods-YelpAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-YelpAPI/Pods-YelpAPI.release.xcconfig"; sourceTree = "<group>"; };
 		9099F183005122018BB80C85 /* Pods_YelpAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YelpAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38A78F0215DA4F10085C7FD /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		B38A78F2215DA5070085C7FD /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		B3AB70BD2132464400167747 /* GPX.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GPX.gpx; sourceTree = "<group>"; };
 		B3AEF3632118F5B9008BFC84 /* YourCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCalloutView.swift; sourceTree = "<group>"; };
 		B3AEF3652118F63B008BFC84 /* YourCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourCalloutView.xib; sourceTree = "<group>"; };
 		B3B8E97C21176D440021B24E /* YelpAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,9 +66,11 @@
 			isa = PBXGroup;
 			children = (
 				B3B8E98621176D450021B24E /* Assets.xcassets */,
+				B38A78F0215DA4F10085C7FD /* Keys.swift */,
 				B3B8E97F21176D440021B24E /* AppDelegate.swift */,
 				B3B8E98821176D450021B24E /* LaunchScreen.storyboard */,
 				B3B8E98B21176D450021B24E /* Info.plist */,
+				B38A78F2215DA5070085C7FD /* keys.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -82,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				B3B8E98121176D440021B24E /* BusinessViewController.swift */,
+				B3AB70BD2132464400167747 /* GPX.gpx */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -127,9 +135,17 @@
 				B34679192119261600B107FE /* Model Controller */,
 				B34679182119261000B107FE /* ViewController */,
 				B34679172119260900B107FE /* Views */,
+				B3C39E82212D1AAB000A42A2 /* CacheManager */,
 				B3467916211925DB00B107FE /* Supporting Files */,
 			);
 			path = YelpAPI;
+			sourceTree = "<group>";
+		};
+		B3C39E82212D1AAB000A42A2 /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CacheManager;
 			sourceTree = "<group>";
 		};
 		CDAF5407D0136F20809DEB31 /* Frameworks */ = {
@@ -201,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38A78F3215DA5070085C7FD /* keys.plist in Resources */,
 				B3B8E98A21176D450021B24E /* LaunchScreen.storyboard in Resources */,
 				B3B8E98721176D450021B24E /* Assets.xcassets in Resources */,
 				B3B8E98521176D440021B24E /* Main.storyboard in Resources */,
@@ -272,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3B8E99221176DE50021B24E /* Business.swift in Sources */,
+				B38A78F1215DA4F10085C7FD /* Keys.swift in Sources */,
 				B3B8E98221176D440021B24E /* BusinessViewController.swift in Sources */,
 				B3B8E98021176D440021B24E /* AppDelegate.swift in Sources */,
 				B3AEF3642118F5B9008BFC84 /* YourCalloutView.swift in Sources */,

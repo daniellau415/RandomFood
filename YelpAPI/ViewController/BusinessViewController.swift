@@ -13,7 +13,6 @@ import MapViewPlus
 
 class BusinessViewController: UIViewController {
 
-    
     @IBOutlet weak var mapView: MapViewPlus!
     
     let locationManager = CLLocationManager()
@@ -109,11 +108,5 @@ extension BusinessViewController: MKMapViewDelegate, MapViewPlusDelegate {
         let calloutView = Bundle.main.loadNibNamed("YourCalloutView", owner: nil, options: nil)!.first as! YourCalloutView
          return calloutView
     }
-    
-    
-    
-
-    
-    
 }
 

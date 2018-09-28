@@ -9,14 +9,13 @@
 import UIKit
 import CoreLocation
 
-
 class BusinessController {
     
     static let shared = BusinessController()
     
     var businesses: [Business] = []
     
-     let accessToken = "JL4PMbUDUhx-pDdb07-lRsSAHCwoE_y8CKiK5G34kDMbd5pjX3hQXlerMrBkMEmj8gIO4p4F98h6SScNqmSsCcIN97RI7yjNEYI7JrpEex2NXOnSzALm1CbWfuHDWnYx"
+    let accessToken = accessKey(keyname: "token")
     
     func searchOnYelp(with location: CLLocationCoordinate2D, completion: @escaping([Business]?) -> Void)  {
         
@@ -42,9 +41,7 @@ class BusinessController {
             }
         }
         dataTask.resume()
-    
     }
-    
     
     func stringToImage(with stringURL: String, completion: @escaping(UIImage?) -> Void) {
         guard let imageURL = URL(string: stringURL) else { return }
@@ -62,6 +59,4 @@ class BusinessController {
         dataTask.resume()
         
     }
-    
-    
 }

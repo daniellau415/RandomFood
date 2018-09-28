@@ -28,10 +28,8 @@ class YourCalloutView: UIView, CalloutViewPlus {
                     self.foodImageView.image = image
                 }
             }
-            
         })
     }
-    
     
     @IBAction func directionButtonTapped(_ sender: Any) {
         
