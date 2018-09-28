@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" id="iN0-l3-epB" customClass="YourCalloutView" customModule="YelpAPI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="118" height="182"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxd-ee-HDZ">
+                    <rect key="frame" x="3" y="10" width="93" height="20.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                    <color key="textColor" red="0.26499524039845929" green="0.27036405456852797" blue="0.26954987338861075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MVZ-zZ-5Ro">
+                    <rect key="frame" x="0.0" y="32" width="118" height="150"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KW3-E2-sOb">
+                    <rect key="frame" x="98" y="10" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="REb-mn-zzD"/>
+                        <constraint firstAttribute="width" constant="20" id="mnc-iV-FaF"/>
+                    </constraints>
+                    <state key="normal" image="compass"/>
+                    <connections>
+                        <action selector="directionButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mre-Ue-yqH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="YourCalloutView"/>
+            <constraints>
+                <constraint firstItem="MVZ-zZ-5Ro" firstAttribute="top" secondItem="gxd-ee-HDZ" secondAttribute="bottom" constant="2" id="3cO-Zw-95a"/>
+                <constraint firstItem="KW3-E2-sOb" firstAttribute="leading" secondItem="gxd-ee-HDZ" secondAttribute="trailing" constant="2" id="4mf-Ku-Ojk"/>
+                <constraint firstAttribute="trailing" secondItem="KW3-E2-sOb" secondAttribute="trailing" id="KdL-SU-nvl"/>
+                <constraint firstAttribute="trailing" secondItem="MVZ-zZ-5Ro" secondAttribute="trailing" id="UBf-ng-C4g"/>
+                <constraint firstItem="MVZ-zZ-5Ro" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="VNG-cU-BGc"/>
+                <constraint firstItem="gxd-ee-HDZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="ZPL-ry-mkK"/>
+                <constraint firstItem="MVZ-zZ-5Ro" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="i7v-eX-jcU"/>
+                <constraint firstItem="gxd-ee-HDZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="3" id="xQX-ho-zSu"/>
+                <constraint firstItem="KW3-E2-sOb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="yJE-Cm-cdy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="foodImageView" destination="MVZ-zZ-5Ro" id="mqP-y1-def"/>
+                <outlet property="foodLabel" destination="gxd-ee-HDZ" id="8qr-r2-14a"/>
+            </connections>
+            <point key="canvasLocation" x="-97" y="-254"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="compass" width="64" height="64"/>
+    </resources>
+</document>
